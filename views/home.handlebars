@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>To Do List</h1>
+
+  <div class="wholeList">
+
+    <ul>
+      {{#toDo}}
+        <li><a href="/delete/{{@index}}"><button id="done"type="button" name="button">&#10003;</button></a> {{.}}</li>
+      {{/toDo}}
+    </ul>
+
+
+
+
+      <ul>
+        {{#completeTask}}
+          <li id="strike">{{.}}</li>
+        {{/completeTask}}
+      </ul>
+
+
+  </div>
+
+
+  <form action="/taskPost" method="post">
+    <div><input id="id_of_textbox" type="text" value="{{taskField.toDo}}" name="toDo" placeholder="Type todo item here!" /></div>
+    <button id="id_of_button">Add Task</button>
+
+    <script>
+    // allows enter button to be used to submit form
+      document.getElementById("id_of_textbox")
+        .addEventListener("keyup", function(event) {
+          event.preventDefault()
+          if (event.keyCode == 13) {
+            document.getElementById("id_of_button").click();
+          }
+        })
+    </script>
+
+  </form>
+
+
+</body>
+
+</html>

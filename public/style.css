@@ -1,0 +1,56 @@
+body {
+  text-align: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+input {
+  align-items: center;
+  padding: 1%;
+  font-size: 30px;
+  position: absolute;
+  top: 500px;
+  left: 250px;
+  width: 65%;
+}
+
+#id_of_button {
+  position: absolute;
+  top: 600px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+}
+
+#done {
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px;
+  font-size: 25px;
+}
+
+#strike {
+  text-decoration: line-through;
+}
+
+.wholeList {
+  margin: 0 25%;
+  text-align: left;
+}
